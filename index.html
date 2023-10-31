@@ -12,8 +12,8 @@
 
     <!-- Luego, enlaza tu archivo CSS personalizado -->
     <link rel="stylesheet" href="styles.css" />
-    <script src="numPares.js"></script>
     <script src="numPrimos.js"></script>
+    <script src="numPares.js"></script>
   </head>
   <body>
     <div class="container p-5">
@@ -38,11 +38,15 @@
       </div>
       <h3>¿Número Primo?</h3>
       <div>
-        <button>
+        <button id="buttonShowNumPrim">
           Comprobar si un número es primo
         </button>
-        <div id="" >
-          <input type="number" placeholder="Introduzca número" id="numPrim" />
+        <div id="containerNumPrimo" class="show-container" >
+          <input type="number" placeholder="Introduzca número" id="insertNum" />
+          <p class="show-resultado" id="showResultado">
+            <span id="numeroPrimo"></span>
+             Es número primo
+          </p>
         </div>
       </div>
       <!-- sólo divisibles entre 1 y por sí mismos -->

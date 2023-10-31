@@ -11,3 +11,13 @@ p {
 .form-pares{
     display: none;
 }
+
+/* Boton números primos */
+
+.show-container{
+    display: none;
+}
+
+.show-resultado{
+    display: none;
+}
