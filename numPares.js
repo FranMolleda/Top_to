@@ -1,5 +1,10 @@
+import {
+  toggleElementVisibility
+} from './utils.js';
+
 // script.js
 document.addEventListener("DOMContentLoaded", function () {
+
   const h1 = document.querySelector("h1");
   let currentColor = "blue";
 
@@ -16,15 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
   /* Filtramos los pares */
 
   const botonFiltrarPares = document.getElementById("botonFiltrar");
-  let showForm = false;
   const formPares = document.getElementById("formPares");
   botonFiltrarPares.addEventListener("click", function () {
-    if (showForm) {
-      formPares.style.display = "none";
-    } else {
-      formPares.style.display = "block";
-    }
-    showForm = !showForm;
+    toggleElementVisibility(formPares)
   });
 
   let parMin = document.getElementById("parMin");

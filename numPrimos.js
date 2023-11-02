@@ -1,52 +1,55 @@
+import {
+    toggleElementVisibility
+} from './utils.js';
+
 document.addEventListener("DOMContentLoaded", function () {
     const numPrimExercise = document.getElementById("containerNumPrimo")
-    let showNumPrimExercise = false;
-
     const botonNumPrim = document.getElementById("buttonShowNumPrim");
 
     botonNumPrim.addEventListener("click", function () {
-        if (!showNumPrimExercise) {
-            numPrimExercise.style.display = "block";
-
-        } else {
-            numPrimExercise.style.display = "none";
-        }
-        showNumPrimExercise = !showNumPrimExercise;
+        toggleElementVisibility(numPrimExercise)
     })
 
     const insertNum = document.getElementById("insertNum");
-    let foo = false
-
-    const numPrimo = function (num) {
+    const esNumeroPrimo = function (num) {
         if (num <= 1) {
-            return foo = false; // Los números menores o iguales a 1 no son primos
+            return false; // Los números menores o iguales a 1 no son primos
         }
         for (let i = 2; i < num; i++) {
             if (num % i === 0) {
-                return foo = false; // Si es divisible por algún número diferente de 1 y sí mismo, no es primo
+                return false; // Si es divisible por algún número diferente de 1 y sí mismo, no es primo
             }
         }
-        return foo = true
+        return true;
+    };
 
-    }
     insertNum.addEventListener("input", function () {
         const num = parseInt(insertNum.value, 10);
-        const resultado = document.getElementById("showResultado");
+        const resultadoPrimo = document.getElementById("showResultado");
+        const resultadoNoPrimo = document.getElementById("showResultadoNoPrimo");
         let okNumPrimo = document.getElementById("numeroPrimo")
-        let showResultado = false;
-        numPrimo(num)
+        let noNumPrimo = document.getElementById("noNumeroPrimo")
+        let showResultadoPrimo = false;
+        let showResultadoNoPrimo = false;
+        esNumeroPrimo(num)
         if (!isNaN(num)) {
-            if (foo) {
-                showResultado = true;
-                resultado.style.display = "block"
+            if (esNumeroPrimo(num)) {
+                showResultadoPrimo = true;
+                showResultadoNoPrimo = false;
+                resultadoPrimo.style.display = "block"
+                resultadoNoPrimo.style.display = "none"
                 okNumPrimo.textContent = num
 
-            } else if (!foo || insertNum.value === NaN) {
-                resultado.style.display = "none"
-
+            } else {
+                showResultadoPrimo = false;
+                showResultadoNoPrimo = true;
+                resultadoPrimo.style.display = "none"
+                resultadoNoPrimo.style.display = "block"
+                noNumPrimo.textContent = num
             }
         } else {
-            resultado.style.display = "none"
+            resultadoPrimo.style.display = "none"
+            resultadoNoPrimo.style.display = "none"
         }
     })
 
