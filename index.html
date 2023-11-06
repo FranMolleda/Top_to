@@ -16,6 +16,7 @@
     <script type="module" src="./numPrimos.js"></script>
     <script type="module" src="./numPares.js"></script>
     <script type="module" src="./manipulacionDom.js"></script>
+    <script type="module" src="./numMayor.js"></script>
   </head>
   <body>
     <div class="container p-5">
@@ -23,7 +24,7 @@
       <h1>Ejercicios</h1>
       <h3>Filtrar números pares</h3>
       <div>
-        <button id="botonFiltrar" class="filtrar-background" data-show="false">
+        <button id="botonFiltrar" class="filtrar-background" >
           Fitrar números pares
         </button>
         <form action="submit" id="formPares" class="form-pares">
@@ -57,11 +58,18 @@
       </div>
       <h3>¿Insertamos y mostramos texto en un párrafo?</h3>
       <div>
-        <button id="InserShowtText" data-show="false">Insertar texto</button>
+        <button id="InserShowtText" >Insertar texto</button>
         <div id="insertText" class="insert-text">
           <input type="text" id="inputManipulation" />
-          <button id="showText" data-show="false">Mostrar texto</button>
+          <button id="showText" >Mostrar texto</button>
           <p id="showParagraphText" class="show-text">Lorem ipsum dolor <b><span id="textToShow" ></span></b> sit amet consectetur, adipisicing elit. Dolores dolor eveniet pariatur saepe quae hic veritatis placeat recusandae debitis quibusdam deserunt accusantium voluptas illum, totam laboriosam similique amet doloribus impedit!</p>
+        </div>
+      </div>
+      <h3>Obten el numero mayor</h3>
+      <div id="mayorConteiner">
+        <button id="mayorBoton">Obten el número mayor</button>
+        <div id="showMayor" class="show-mayor">
+          <input type="text" id="numeros" placeholder="Introduzca los numeros que considere">
         </div>
       </div>
     </div>
