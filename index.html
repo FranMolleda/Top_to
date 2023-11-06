@@ -12,8 +12,10 @@
 
     <!-- Luego, enlaza tu archivo CSS personalizado -->
     <link rel="stylesheet" href="styles.css" />
-    <script src="numPrimos.js"></script>
-    <script src="numPares.js"></script>
+    <script type="module" src="./utils.js"></script>
+    <script type="module" src="./numPrimos.js"></script>
+    <script type="module" src="./numPares.js"></script>
+    <script type="module" src="./manipulacionDom.js"></script>
   </head>
   <body>
     <div class="container p-5">
@@ -21,7 +23,7 @@
       <h1>Ejercicios</h1>
       <h3>Filtrar números pares</h3>
       <div>
-        <button id="botonFiltrar" class="filtrar-background">
+        <button id="botonFiltrar" class="filtrar-background" data-show="false">
           Fitrar números pares
         </button>
         <form action="submit" id="formPares" class="form-pares">
@@ -38,7 +40,7 @@
       </div>
       <h3>¿Número Primo?</h3>
       <div>
-        <button id="buttonShowNumPrim">
+        <button id="buttonShowNumPrim" data-show="false">
           Comprobar si un número es primo
         </button>
         <div id="containerNumPrimo" class="show-container" >
@@ -47,9 +49,21 @@
             <span id="numeroPrimo"></span>
              Es número primo
           </p>
+          <p class="show-resultado" id="showResultadoNoPrimo">
+            <span id="noNumeroPrimo"></span>
+             No es número primo
+          </p>
         </div>
       </div>
-      <!-- sólo divisibles entre 1 y por sí mismos -->
+      <h3>¿Insertamos y mostramos texto en un párrafo?</h3>
+      <div>
+        <button id="InserShowtText" data-show="false">Insertar texto</button>
+        <div id="insertText" class="insert-text">
+          <input type="text" id="inputManipulation" />
+          <button id="showText" data-show="false">Mostrar texto</button>
+          <p id="showParagraphText" class="show-text">Lorem ipsum dolor <b><span id="textToShow" ></span></b> sit amet consectetur, adipisicing elit. Dolores dolor eveniet pariatur saepe quae hic veritatis placeat recusandae debitis quibusdam deserunt accusantium voluptas illum, totam laboriosam similique amet doloribus impedit!</p>
+        </div>
+      </div>
     </div>
   </div>
     

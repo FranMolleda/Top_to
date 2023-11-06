@@ -21,3 +21,13 @@ p {
 .show-resultado{
     display: none;
 }
+
+/* Dom manipulation */
+
+.insert-text{
+    display: none;
+}
+
+.show-text{
+    display: none;
+}

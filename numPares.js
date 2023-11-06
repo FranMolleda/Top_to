@@ -1,5 +1,13 @@
+/* 1. **Ejercicio de bucles y estructuras de control**:
+   - Crea un programa que muestre todos los números pares entre 1 y 100. */
+
+import {
+  toggleElementVisibility
+} from './utils.js';
+
 // script.js
 document.addEventListener("DOMContentLoaded", function () {
+
   const h1 = document.querySelector("h1");
   let currentColor = "blue";
 
@@ -16,32 +24,29 @@ document.addEventListener("DOMContentLoaded", function () {
   /* Filtramos los pares */
 
   const botonFiltrarPares = document.getElementById("botonFiltrar");
-  let showForm = false;
   const formPares = document.getElementById("formPares");
   botonFiltrarPares.addEventListener("click", function () {
-    if (showForm) {
-      formPares.style.display = "none";
-    } else {
-      formPares.style.display = "block";
-    }
-    showForm = !showForm;
+    toggleElementVisibility(formPares)
   });
 
   let parMin = document.getElementById("parMin");
   let startArray;
   parMin.addEventListener("input", function () {
-    startArray = parMin.value;
+    startArray = parseInt(parMin.value, 10);
   });
   let parMax = document.getElementById("parMax");
   let finishArray;
   let resultado = document.getElementById("parResultado");
   let parArr = [];
   parMax.addEventListener("input", function () {
-    finishArray = parMax.value;
-    mostrarResultado(startArray);
+    finishArray = parseInt(parMax.value, 10);
+
+
+    mostrarResultado(startArray, finishArray);
+
   });
 
-  const mostrarResultado = (startArray) => {
+  const mostrarResultado = (startArray, finishArray) => {
     parArr = [];
     if (startArray >= 0 && finishArray > startArray) {
       for (let i = startArray; i <= finishArray; i++) {
@@ -50,6 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
       resultado.textContent = parArr.join(", ");
+    } else {
+      resultado.textContent = "Los datos no son válidos";
     }
   };
 });

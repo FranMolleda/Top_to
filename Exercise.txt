@@ -1,0 +1,33 @@
+Las pruebas técnicas de JavaScript pueden variar ampliamente según el empleador y el nivel del puesto, pero aquí tienes una lista de 10 tipos de ejercicios comunes que a menudo se incluyen en las pruebas técnicas de JavaScript. Estos ejercicios te ayudarán a fortalecer tus habilidades de programación en JavaScript:
+
+1. **Ejercicio de bucles y estructuras de control**:
+   - Crea un programa que muestre todos los números pares entre 1 y 100.
+
+2. **Ejercicio de funciones**:
+   - Escribe una función que determine si un número es primo o no.
+
+3. **Ejercicio de manipulación del DOM**:
+   - Crea un programa que permita al usuario ingresar texto en un campo de entrada y luego mostrar ese texto en un párrafo en la página después de hacer clic en un botón.
+
+4. **Ejercicio de manipulación de arreglos**:
+   - Dado un arreglo de números, escribe una función que encuentre el número más grande en el arreglo.
+
+5. **Ejercicio de eventos y manejo de eventos**:
+   - Crea un programa que registre eventos de clic en un botón y cuente cuántas veces se ha hecho clic en ese botón.
+
+6. **Ejercicio de promesas**:
+   - Escribe una función que realice una solicitud AJAX a una API y devuelva los datos en forma de promesa.
+
+7. **Ejercicio de programación asincrónica**:
+   - Crea una función que simule la ejecución asincrónica de varias tareas y asegúrate de que se completen en el orden correcto.
+
+8. **Ejercicio de manipulación de objetos**:
+   - Dado un objeto que representa un producto con propiedades como nombre, precio y cantidad, escribe una función que calcule el costo total del producto.
+
+9. **Ejercicio de manipulación de cadenas**:
+   - Escribe una función que invierta una cadena dada.
+
+10. **Ejercicio de módulos y modularidad**:
+    - Divide tu código en módulos separados y demuestra cómo importar y exportar funciones y variables entre ellos.
+
+Estos ejercicios abarcan una variedad de conceptos y habilidades clave en JavaScript, desde la programación básica hasta temas más avanzados como promesas y manipulación del DOM. A medida que avanzas en tu preparación, te recomiendo practicar estos ejercicios y buscar otros desafíos en línea o en libros de preparación para entrevistas de desarrollo web. Además, familiarízate con las bibliotecas y marcos comunes que se utilizan en el desarrollo web, ya que muchas pruebas técnicas pueden incluir preguntas relacionadas con estas tecnologías.
