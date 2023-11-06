@@ -1,14 +1,11 @@
-let showElement = false
-
 function toggleElementVisibility(element) {
-    if (showElement) {
-        element.style.display = "none"
+    if (element.style.display === "none" || element.style.display === "") {
+        element.style.display = "block";
     } else {
-        element.style.display = "block"
+        element.style.display = "none";
     }
-    showElement = !showElement;
 }
 
 export {
-    toggleElementVisibility,
+    toggleElementVisibility
 };

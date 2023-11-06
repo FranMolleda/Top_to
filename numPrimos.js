@@ -1,3 +1,6 @@
+/* 2. **Ejercicio de funciones**:
+   - Escribe una función que determine si un número es primo o no. */
+
 import {
     toggleElementVisibility
 } from './utils.js';
