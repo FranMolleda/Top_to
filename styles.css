@@ -37,3 +37,7 @@ p {
 .show-mayor{
     display: none;
 }
+
+.show-resultado{
+    display: none;
+}

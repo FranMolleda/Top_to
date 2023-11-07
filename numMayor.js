@@ -7,20 +7,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const showMayorNum = document.getElementById("mayorBoton")
     const mayorContainer = document.getElementById("showMayor")
     const numeros = document.getElementById("numeros")
+    const botonMayor = document.getElementById("buttonBigestNum")
 
     showMayorNum.addEventListener("click", function () {
         toggleElementVisibility(mayorContainer)
     })
 
-    numeros.addEventListener("input", function () {
+
+    botonMayor.addEventListener("click", function () {
 
         const numerosInput = numeros.value;
-        const numerosValidos = /^(\d+(,\d+)*)?$/.test(numerosInput);
-        if (!numerosValidos) {
-            console.log("No es un número");
+        const ArrayNum = numerosInput.replace(/\s/g, '').split(',');
+        const arrayParsed = ArrayNum.map(num => parseInt(num)).filter(num => isNaN(num) === false);
+        const numMayor = Math.max(...arrayParsed)
+        let resultado = document.getElementById("mayorResultado")
+        if (numMayor) {
+            resultado.style.display = "block"
+            resultado.textContent = `${numMayor} Es el número mayor`
         }
-        console.log(numerosInput);
-        console.log(numerosValidos);
+        if (!numMayor || numMayor === -Infinity) {
+            resultado.style.display = "block"
+            resultado.textContent = `Introduzca al menos un número`
+        }
+        console.log(numMayor);
+
+
     })
 
 
