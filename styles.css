@@ -31,3 +31,13 @@ p {
 .show-text{
     display: none;
 }
+
+/* Obten el mayor */
+
+.show-mayor{
+    display: none;
+}
+
+.show-resultado{
+    display: none;
+}
