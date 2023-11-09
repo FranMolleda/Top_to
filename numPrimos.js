@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     const insertNum = document.getElementById("insertNum");
+
     const esNumeroPrimo = function (num) {
         if (num <= 1) {
             return false; // Los números menores o iguales a 1 no son primos

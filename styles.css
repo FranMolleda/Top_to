@@ -41,3 +41,13 @@ p {
 .show-resultado{
     display: none;
 }
+
+.show-reset{
+    display: none;
+}
+
+/* Maneja promesa */
+
+.show-article{
+    display: none;
+}
