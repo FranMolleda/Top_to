@@ -18,6 +18,7 @@
     <script type="module" src="./manipulacionDom.js"></script>
     <script type="module" src="./numMayor.js"></script>
     <script type="module" src="./counterClicks.js"></script>
+    <script type="module" src="./promesas.js"></script>
   </head>
   <body>
     <div class="container p-5">
@@ -79,7 +80,16 @@
       <div id="clicsContainer">
         <button id="botonClicks">Pulsa aquí</button>
         <span id="resultadoClicks" class="resultado-clicks"></span>
-        <button id="resetCount">Resetear</button>
+        <button id="resetCount" class="show-reset">Resetear</button>
+      </div>
+      <h3>Ejercicio de promesas</h3>
+      <div id="promisesContainer">
+        <button id="promesasButton">Obten un artículo</button>
+        <div id="dataArticle" class="show-article">
+          <p id="titleArticle"></p>
+          <p id="DescriptionArticle"></p>
+          <img src="" alt="" id="imageArticle" width="300" height="200">
+        </div>
       </div>
     </div>
   </div>
