@@ -51,3 +51,9 @@ p {
 .show-article{
     display: none;
 }
+
+/* Asincronía */
+
+.show-async{
+    display: none;
+}
